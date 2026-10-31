@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. ZMIENNE CSS I USTAWIENIA BAZOWE
+   1. ZMIENNE CSS I MOTYWY (JASNY / CIEMNY)
    ========================================================================== */
 :root {
     --bg-primary: #ffffff;
@@ -17,6 +17,20 @@
     --transition: 0.25s ease;
 }
 
+body.dark-mode {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #cbd5e1;
+    --accent-primary: #3b82f6;
+    --accent-hover: #60a5fa;
+    --accent-gold: #fbbf24;
+    --border-color: #334155;
+    --header-bg: rgba(15, 23, 42, 0.96);
+    --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -29,6 +43,7 @@ body {
     color: var(--text-main);
     line-height: 1.65;
     overflow-x: hidden;
+    transition: background-color var(--transition), color var(--transition);
 }
 
 img {
@@ -97,7 +112,23 @@ img {
     border-bottom-color: var(--accent-primary);
 }
 
-/* Przycisk Hamburger (ukryty na komputerach, widoczny na telefonach) */
+.theme-btn {
+    background-color: var(--bg-secondary);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.theme-btn:hover {
+    background-color: var(--border-color);
+    transform: translateY(-1px);
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -331,6 +362,64 @@ img {
     font-size: 0.96rem;
 }
 
+/* ==========================================================================
+   5. ROZWIJANE CIEKAWOSTKI (FAQ)
+   ========================================================================== */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--bg-card);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.faq-question:hover {
+    background-color: var(--bg-secondary);
+}
+
+.faq-icon {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 24px 20px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
 .site-footer {
     background-color: #0f172a;
     color: #e2e8f0;
@@ -344,7 +433,7 @@ img {
 }
 
 /* ==========================================================================
-   5. RESPONSYWNOŚĆ (MEDIA QUERIES DLA TELEFONÓW I TABLETÓW)
+   6. RESPONSYWNOŚĆ (MEDIA QUERIES DLA TELEFONÓW I TABLETÓW)
    ========================================================================== */
 @media (max-width: 768px) {
     .menu-toggle {

@@ -29,6 +29,12 @@
                     <li><a href="#atrakcje" class="nav-link">Atrakcje</a></li>
                     <li><a href="#ciekawostki" class="nav-link">Ciekawostki i FAQ</a></li>
                     <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                    <li>
+                        <!-- Przycisk zmiany motywu -->
+                        <button class="theme-btn" id="themeToggle" type="button" aria-label="Zmień motyw kolorystyczny">
+                            Tryb ciemny
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -174,6 +180,54 @@
                             </p>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekcja 3: Ciekawostki i FAQ (Rozwijane sekcje obsługiwane przez JS) -->
+        <section id="ciekawostki" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Ciekawostki i praktyczne porady (FAQ)</h2>
+                    <p>Kliknij wybrane pytanie poniżej, aby rozwinąć odpowiedź i poznać zaskakujące fakty o Paryżu.</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Skąd wzięła się nazwa „Miasto Świateł” (La Ville Lumière)?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Przydomek ten ma podwójne znaczenie. Po pierwsze, w XVIII wieku Paryż był intelektualnym centrum europejskiego Oświecenia. Po drugie, w 1828 roku jako jedno z pierwszych miast w Europie wprowadził gazowe oświetlenie uliczne na Wielkich Bulwarach.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Czy Wieża Eiffla naprawdę zmienia swoją wysokość?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Tak! Ponieważ wieża jest wykonana z metalu, pod wpływem wysokich temperatur latem metal rozszerza się (zjawisko rozszerzalności cieplnej), przez co konstrukcja może być latem nawet o 15 centymetrów wyższa niż podczas mroźnej zimy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Jak najtaniej i najwygodniej poruszać się po Paryżu?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Najlepszym środkiem transportu jest paryskie metro oraz piesze spacery wzdłuż Sekwany. Warto zaopatrzyć się w kartę komunikacji miejskiej Navigo Easy lub kupować bilety w aplikacji mobilnej Île-de-France Mobilités. Dodatkowo osoby poniżej 26. roku życia z krajów Unii Europejskiej wchodzą za darmo do większości państwowych muzeów (w tym do Luwru)!
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
