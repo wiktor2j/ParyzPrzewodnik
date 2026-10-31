@@ -97,6 +97,27 @@ img {
     border-bottom-color: var(--accent-primary);
 }
 
+/* Przycisk Hamburger (ukryty na komputerach, widoczny na telefonach) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-main);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
 /* ==========================================================================
    3. SEKCJA POWITALNA (HERO) I PRZYCISKI
    ========================================================================== */
@@ -175,7 +196,7 @@ img {
 }
 
 /* ==========================================================================
-   4. SEKCJA "O PARYŻU" (CSS GRID) I STOPKA
+   4. SEKCJA "O PARYŻU" ORAZ KARTY ATRAKCJI (CSS GRID)
    ========================================================================== */
 .section {
     padding: 72px 0;
@@ -257,6 +278,59 @@ img {
     color: var(--text-muted);
 }
 
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 24px;
+    flex: 1;
+}
+
+.card-tag {
+    display: inline-block;
+    background-color: rgba(29, 78, 216, 0.12);
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card-body h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: var(--text-muted);
+    font-size: 0.96rem;
+}
+
 .site-footer {
     background-color: #0f172a;
     color: #e2e8f0;
@@ -267,4 +341,76 @@ img {
     text-align: center;
     color: #94a3b8;
     font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   5. RESPONSYWNOŚĆ (MEDIA QUERIES DLA TELEFONÓW I TABLETÓW)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow);
+        display: none;
+        padding: 20px;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 1.05rem;
+    }
+
+    .hero {
+        padding: 64px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .about-grid,
+    .attractions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }

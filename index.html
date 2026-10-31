@@ -16,6 +16,13 @@
                 Paryż<span>Przewodnik</span>
             </a>
 
+            <!-- Przycisk menu mobilnego (Hamburger) obsługiwany przez JS -->
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Otwórz lub zamknij menu nawigacyjne">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
             <nav class="main-nav" id="mainNav" aria-label="Główna nawigacja">
                 <ul class="nav-list">
                     <li><a href="#o-paryzu" class="nav-link">O mieście</a></li>
@@ -90,6 +97,86 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sekcja 2: Najważniejsze atrakcje turystyczne -->
+        <section id="atrakcje" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Najważniejsze atrakcje turystyczne</h2>
+                    <p>Cztery obowiązkowe punkty na mapie każdego podróżnika odwiedzającego Paryż po raz pierwszy.</p>
+                </div>
+
+                <div class="attractions-grid">
+                    <!-- Karta 1 -->
+                    <article class="card">
+                        <img 
+                            src="https://cdn-imgix.headout.com/media/images/32925826cac2130f2b9174ff2aa09635-Experience-Images.jpg?auto=compress%2Cformat&ar=16%3A10&crop=faces%2Ccenter&fit=crop&w=3840&q=50" 
+                            alt="Wieża Eiffla w Paryżu widoczna w słoneczny dzień na tle błękitnego nieba" 
+                            class="card-img"
+                            loading="lazy"
+                        >
+                        <div class="card-body">
+                            <span class="card-tag">Symbol miasta</span>
+                            <h3>Wieża Eiffla (Tour Eiffel)</h3>
+                            <p>
+                                Zbudowana w 1889 roku na Wystawę Światową żelazna konstrukcja o wysokości 330 metrów. Z jej trzech tarasów widokowych rozciąga się niezapomniana panorama całego Paryża, a co wieczór o pełnej godzinie wieża rozbłyska tysiącami świateł.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Karta 2 -->
+                    <article class="card">
+                        <img 
+                            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/500px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=pl.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" 
+                            alt="Szklana piramida na dziedzińcu Muzeum w Luwrze oświetlona o zmierzchu" 
+                            class="card-img"
+                            loading="lazy"
+                        >
+                        <div class="card-body">
+                            <span class="card-tag">Sztuka i historia</span>
+                            <h3>Muzeum w Luwrze (Musée du Louvre)</h3>
+                            <p>
+                                Dawny pałac królewski i jedno z największych muzeów sztuki na świecie. Charakterystyczne wejście przez szklaną piramidę prowadzi do sal, w których zobaczysz m.in. obraz „Mona Lisa” Leonarda da Vinci oraz rzeźbę Wenus z Milo.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Karta 3 -->
+                    <article class="card">
+                        <img 
+                            src="https://wycieczkownia.pl/wp-content/uploads/2020/03/SACR%C3%89-COEUR1.jpg" 
+                            alt="Biała Bazylika Sacré-Cœur na szczycie zielonego wzgórza Montmartre" 
+                            class="card-img"
+                            loading="lazy"
+                        >
+                        <div class="card-body">
+                            <span class="card-tag">Dzielnica artystów</span>
+                            <h3>Wzgórze Montmartre i Sacré-Cœur</h3>
+                            <p>
+                                Najwyżej położona dzielnica Paryża z białą bazyliką Sacré-Cœur na szczycie. Dawniej tworzyły tu legendy malarstwa, takie jak Pablo Picasso czy Vincent van Gogh, a dziś na placu du Tertre można zamówić własny portret u ulicznych malarzy.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Karta 4 -->
+                    <article class="card">
+                        <img 
+                            src="https://media.istockphoto.com/id/1674959033/pl/zdj%C4%99cie/katedra-notre-dame-de-paris-w-pary%C5%BCu-francja.jpg?s=612x612&w=0&k=20&c=5_LgHDE7P_FT-1Y4rP1LirfJG2b0Oz2g3XGSlffsbS4=" 
+                            alt="Gotycka fasada katedry Notre-Dame w Paryżu z dwiema charakterystycznymi wieżami" 
+                            class="card-img"
+                            loading="lazy"
+                        >
+                        <div class="card-body">
+                            <span class="card-tag">Architektura gotycka</span>
+                            <h3>Katedra Notre-Dame</h3>
+                            <p>
+                                Arcydzieło francuskiego gotyku położone na wyspie Île de la Cité na Sekwanie. Jej budowa rozpoczęła się w XII wieku. Katedra słynie z imponujących rozet witrażowych, kamiennych gargulców oraz powieści Victora Hugo.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- STOPKA -->
@@ -99,5 +186,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
