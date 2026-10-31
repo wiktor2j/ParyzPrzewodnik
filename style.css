@@ -226,6 +226,16 @@ img {
     transform: translateY(-2px);
 }
 
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--border-color);
+}
+
 /* ==========================================================================
    4. SEKCJA "O PARYŻU" ORAZ KARTY ATRAKCJI (CSS GRID)
    ========================================================================== */
@@ -420,20 +430,172 @@ img {
     display: block;
 }
 
+/* ==========================================================================
+   6. QUIZ O PARYŻU
+   ========================================================================== */
+.quiz-box {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+}
+
+.quiz-question {
+    border: none;
+    margin-bottom: 26px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.quiz-question legend {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.quiz-option:hover {
+    background-color: var(--bg-secondary);
+}
+
+.quiz-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.quiz-result {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: none;
+}
+
+.quiz-result.visible {
+    display: block;
+}
+
+.quiz-result.success {
+    background-color: rgba(22, 163, 74, 0.15);
+    color: #15803d;
+    border: 1px solid #16a34a;
+}
+
+body.dark-mode .quiz-result.success {
+    color: #4ade80;
+}
+
+.quiz-result.warning {
+    background-color: rgba(217, 119, 6, 0.15);
+    color: #b45309;
+    border: 1px solid #d97706;
+}
+
+body.dark-mode .quiz-result.warning {
+    color: #fbbf24;
+}
+
+/* ==========================================================================
+   7. STOPKA I PRZYCISK POWROTU NA GÓRĘ
+   ========================================================================== */
 .site-footer {
     background-color: #0f172a;
     color: #e2e8f0;
-    padding: 32px 0;
+    padding: 56px 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-size: 1.15rem;
+}
+
+.footer-col p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+    text-decoration: underline;
 }
 
 .footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 24px;
     text-align: center;
     color: #94a3b8;
     font-size: 0.9rem;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition);
+    z-index: 900;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
 /* ==========================================================================
-   6. RESPONSYWNOŚĆ (MEDIA QUERIES DLA TELEFONÓW I TABLETÓW)
+   8. RESPONSYWNOŚĆ (MEDIA QUERIES DLA TELEFONÓW I TABLETÓW)
    ========================================================================== */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -482,7 +644,8 @@ img {
     }
 
     .about-grid,
-    .attractions-grid {
+    .attractions-grid,
+    .footer-grid {
         grid-template-columns: 1fr;
     }
 
@@ -496,6 +659,10 @@ img {
 
     .section-header h2 {
         font-size: 1.6rem;
+    }
+
+    .quiz-box {
+        padding: 20px;
     }
 
     .btn {

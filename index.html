@@ -231,14 +231,118 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sekcja 4: Interaktywny Quiz (Obsługiwany przez JS) -->
+        <section id="quiz" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sprawdź swoją wiedzę: Quiz o Paryżu</h2>
+                    <p>Odpowiedz na 3 krótkie pytania i zobacz, jak dobrze znasz stolicę Francji.</p>
+                </div>
+
+                <form id="parisQuiz" class="quiz-box">
+                    <!-- Pytanie 1 -->
+                    <fieldset class="quiz-question">
+                        <legend>1. Nad jaką rzeką leży Paryż?</legend>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="a"> Nad Loarą
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="b"> Nad Sekwaną
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q1" value="c"> Nad Rodanem
+                        </label>
+                    </fieldset>
+
+                    <!-- Pytanie 2 -->
+                    <fieldset class="quiz-question">
+                        <legend>2. W którym roku ukończono budowę Wieży Eiffla?</legend>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="a"> W 1889 roku
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="b"> W 1925 roku
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q2" value="c"> W 1789 roku
+                        </label>
+                    </fieldset>
+
+                    <!-- Pytanie 3 -->
+                    <fieldset class="quiz-question">
+                        <legend>3. Na ilu historycznych dzielnic (arrondissements) podzielony jest Paryż?</legend>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="a"> 12 dzielnic
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="b"> 20 dzielnic
+                        </label>
+                        <label class="quiz-option">
+                            <input type="radio" name="q3" value="c"> 35 dzielnic
+                        </label>
+                    </fieldset>
+
+                    <div class="quiz-actions">
+                        <button type="submit" class="btn btn-primary">Sprawdź wynik</button>
+                        <button type="reset" id="resetQuizBtn" class="btn btn-outline">Wyczyść odpowiedzi</button>
+                    </div>
+
+                    <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <!-- STOPKA -->
+    <!-- STOPKA Z LINKAMI ZEWNĘTRZNYMI I WEWNĘTRZNYMI -->
     <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>ParyżPrzewodnik</h3>
+                <p>Edukacyjno-podróżniczy projekt strony internetowej poświęcony stolicy Francji, stworzony w technologiach HTML5, CSS3 oraz JavaScript.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Szybka nawigacja</h3>
+                <ul class="footer-links">
+                    <li><a href="#o-paryzu">O mieście</a></li>
+                    <li><a href="#atrakcje">Najważniejsze atrakcje</a></li>
+                    <li><a href="#ciekawostki">Ciekawostki i FAQ</a></li>
+                    <li><a href="#quiz">Quiz wiedzy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Przydatne źródła zewnętrzne</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://parisjetaime.com/eng/" target="_blank" rel="noopener noreferrer">
+                            Oficjalne Biuro Turystyki w Paryżu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.louvre.fr/en" target="_blank" rel="noopener noreferrer">
+                            Oficjalna strona Muzeum w Luwrze
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pl.wikipedia.org/wiki/Pary%C5%BC" target="_blank" rel="noopener noreferrer">
+                            Paryż w encyklopedii Wikipedia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="container footer-bottom">
             <p>&copy; 2026 Wiktor Ochab 103451 – Przewodnik po Paryżu. Wszystkie prawa zastrzeżone.</p>
         </div>
     </footer>
+
+    <!-- Przycisk powrotu na górę strony obsługiwany przez JS -->
+    <button id="backToTop" class="back-to-top" aria-label="Wróć na samą górę strony" title="Do góry">
+        ↑
+    </button>
 
     <script src="script.js"></script>
 </body>
