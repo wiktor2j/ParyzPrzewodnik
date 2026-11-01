@@ -37,6 +37,18 @@ body.dark-mode {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dostępność: wyraźny obrys przy nawigacji klawiaturą (Tab) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 3px;
+}
+
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-primary);
